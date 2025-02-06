@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AF1E146-ED2B-475C-B6DD-91080E0A859F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Information_Accumulate_From_USB_Drive</RootNamespace>
+    <AssemblyName>Information Accumulate From USB Drive</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Check_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check_Password.Designer.cs">
+      <DependentUpon>Check_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriveDetected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folder_Lock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folder_Lock.Designer.cs">
+      <DependentUpon>Folder_Lock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual_Virus_Remover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual_Virus_Remover.Designer.cs">
+      <DependentUpon>Manual_Virus_Remover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IA_USB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IA_USB.Designer.cs">
+      <DependentUpon>IA_USB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Check_Password.resx">
+      <DependentUpon>Check_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriveDetected.resx">
+      <DependentUpon>DriveDetected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Folder_Lock.resx">
+      <DependentUpon>Folder_Lock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IA_USB.resx">
+      <DependentUpon>IA_USB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual_Virus_Remover.resx">
+      <DependentUpon>Manual_Virus_Remover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utilities-antivirus-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secure-USB1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
